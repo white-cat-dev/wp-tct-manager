@@ -1,0 +1,335 @@
+.tct-manager-to-cart {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.tct-manager-input-group {
+    display: flex;
+    position: relative;
+}
+
+.tct-manager-input-group span.units {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: solid 1px transparent;
+    padding: 7px 10px;
+    color: transparent;
+    overflow: hidden;
+    max-width: 100px;
+    white-space: nowrap;
+}
+
+.tct-manager-input-group span.units > span {
+    color: #555555;
+}
+
+.tct-manager-input {
+	padding: 7px 10px;
+	border: solid 1px #DDDDDD;
+	color: #222222;
+    width: 100px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.001);
+    z-index: 2;
+}
+
+.tct-manager-input:focus {
+    outline: none;
+    border-color: #00579F;
+}
+
+.tct-manager-input:disabled {
+	background: rgba(0, 0, 0, 0.03);
+	color: #555555;
+} 
+
+.tct-manager-button {
+	display: inline-block;
+	background: #00579F;
+	color: #ffffff;
+    width: 220px;
+	padding: 7px 10px;
+	text-align: center;
+    font-weight: normal;
+    border-radius: 0px;
+    text-transform: uppercase;
+    border: solid 1px #00579F;
+    font-family: Century Gothic;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.tct-manager-button:active,
+.tct-manager-button:focus {
+    outline: none;
+}
+
+.tct-manager-button:hover {
+    background: #004b89;
+}
+
+.tct-manager-light-button {
+    display: inline-block;
+    background: #005dab;
+    color: #ffffff;
+    width: 220px;
+    padding: 7px 10px;
+    text-align: center;
+    font-weight: normal;
+    border-radius: 0px;
+    text-transform: uppercase;
+    border: solid 1px #005dab;
+    font-family: Century Gothic;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.tct-manager-light-button:focus {
+    outline: none;
+    color: #FFFFFF;
+}
+
+.tct-manager-light-button:hover,
+.tct-manager-light-button:active {
+    color: #ffffff;
+}
+
+[ng-cloak] {
+    display: none;
+}
+
+
+.tct-loading-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.5);
+}
+
+.tct-cart-table {
+    border-top: solid 1px #DDDDDD;
+    border-bottom: solid 1px #DDDDDD;
+}
+
+.tct-cart-table th {
+    border: none;
+    border-bottom: solid 1px #DDDDDD;
+    background: none;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #00579f;
+    font-size: 16px;
+    font-family: 'Century Gothic';
+}
+
+.tct-cart-table td {
+    border: none;
+    padding: 10px;
+    white-space: nowrap;
+    color: #333333;
+    height: 51px;
+}
+
+.tct-cart-table td:nth-child(2) {
+    white-space: normal;
+}
+
+.tct-cart-table td:nth-child(4),
+.tct-cart-table td:nth-child(5),
+.tct-cart-table td:nth-child(6),
+.tct-cart-table td:nth-child(7) {
+    text-align: center;
+}
+
+.tct-cart-table select {
+    height: 35px;
+    border: solid 1px #DDDDDD;
+    width: 150px;
+    padding: 0px 5px;
+}
+
+.tct-empty-button {
+    font-size: 20px;
+    background: none;
+    color: #00579f;
+    padding: 5px 10px;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.tct-cart-count-group {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    border: solid 1px #DDDDDD;
+}
+
+.tct-cart-count-group button {
+    border: none;
+    background: none;
+    color: #333333;
+    padding: 0px;
+    font-size: 20px;
+    transition: 0.3s;
+    width: 12px;
+    font-weight: normal;
+}
+
+.tct-cart-count-group button:hover {
+    background: none;
+    color: #00579F;
+}
+
+.tct-cart-count-group button:focus {
+    outline: none;
+}
+
+.tct-cart-count-group input {
+    width: 100px;
+    margin: 0px 5px;
+    padding: 0px 10px;
+    background: rgba(0, 0, 0, 0.001);
+    z-index: 2;
+    border: none;
+    height: 33px;
+    padding-right: 33px;
+    text-align: center;
+}
+
+.tct-cart-count-group input:focus {
+    outline: none;
+    border-color: #00579F;
+}
+
+.tct-cart-count-group span.units {
+    position: absolute;
+    top: 3px;
+    left: 25px;
+    right: 25px;
+    width: calc(100% - 50px);
+    border: solid 1px transparent;
+    padding: 0px;
+    color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tct-cart-count-group span.units > span {
+    color: #555555;
+}
+
+.tct-main-cart-block {
+    padding: 0px 20px;
+}
+
+.tct-info-block {
+    margin-top: 20px;
+    display: flex;
+    border-bottom: solid 1px #ddd;
+    padding: 0px 10px 25px 10px;
+}
+
+.tct-info-block > div {
+    flex: 1;
+}
+
+.tct-info-block .tct-manager-button {
+    text-transform: none;
+}
+
+.tct-block-title {
+    color: #00579f;
+    font-family: 'Century Gothic';
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tct-input-group {
+    margin-bottom: 15px;
+}
+
+.tct-input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.tct-input-group input {
+    height: 33px;
+    width: 350px;
+    max-width: 100%;
+    border: solid 1px #ddd;
+    padding: 0px 10px;
+}
+
+.tct-input-group input.invalid {
+    border-color: red;
+}
+
+.tct-input-group input:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px #00579f;
+    border-color: #00579f;
+}
+
+.tct-checkbox-group label {
+    margin-bottom: 6px;
+    color: #333333;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.tct-small-input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.tct-small-input-group input {
+    height: 33px;
+    width: 100px;
+    max-width: 100%;
+    border: solid 1px #ddd;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+.tct-small-input-group input:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px #00579f;
+    border-color: #00579f;
+}
+
+.tct-info-label {
+    margin-bottom: 10px;
+}
+
+.tct-info-text {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tct-buttons-block {
+    margin-top: 20px;
+    padding: 0px 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tct-buttons-block .tct-manager-button {
+    padding: 10px;
+}
+
+.tct-success-order {
+    text-align: center;
+    padding: 100px;
+    font-size: 25px;
+}
