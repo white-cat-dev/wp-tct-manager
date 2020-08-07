@@ -1,3 +1,15 @@
+.tct-manager-post-content table td {
+    padding: 5px 15px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.tct-manager-in-stock table td {
+    padding: 5px 15px;
+    font-size: 14px;
+    color: #555555;
+}
+
 .tct-manager-to-cart {
     margin-top: 25px;
     display: inline-block;

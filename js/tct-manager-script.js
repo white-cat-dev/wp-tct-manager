@@ -1,6 +1,6 @@
 var tctApp = angular.module('tctApp', ['ngResource', 'ngCookies']);
 
-var prefix = 'http://manager.582907.local/wp-api';
+var prefix = 'http://manager.582907.ru/wp-api';
 
 
 tctApp.config(function($provide) {
@@ -71,8 +71,13 @@ tctApp.controller('toCartController', [
 					$scope.isToCartShown = true;
 					$scope.productGroup = response;
 					$scope.units = $sce.trustAsHtml($scope.productGroup.units);
-					$scope.in_stock_text = $sce.trustAsHtml($scope.productGroup.in_stock_text);
 					$scope.toCartData.id = $scope.productGroup.id;
+
+					for (product of $scope.productGroup.products)
+					{
+						product.in_stock = $sce.trustAsHtml(product.in_stock);
+						product.in_stock_pair = $sce.trustAsHtml(product.in_stock_pair);
+					}
 				}
 			});
 		}
@@ -97,6 +102,7 @@ tctApp.controller('toCartController', [
 				$scope.isLinkShown = true;
 			});
 		}
+
 
 		$scope.updateCount = function()
 		{

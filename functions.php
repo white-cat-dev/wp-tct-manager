@@ -18,17 +18,49 @@ function tct_manager_content($content)
     {
         if (strpos($content, 'class="tct-manager-post-content"') !== false)
         {
-            $buttonTemplate = '<div class="tct-manager-to-cart" ng-if="isToCartShown" ng-cloak>
-                <div class="tct-manager-input-group">
-                <span class="units">{{ toCartData.count }} <span ng-bind-html="units"></span></span>
-                    <input type="text" class="tct-manager-input" ng-model="toCartData.count" ng-disabled="isLoading" ng-change="updateCount()">
+            // $buttonTemplate = '<div class="tct-manager-to-cart" ng-if="isToCartShown" ng-cloak>
+            //     <div class="tct-manager-input-group">
+            //     <span class="units">{{ toCartData.count }} <span ng-bind-html="units"></span></span>
+            //         <input type="text" class="tct-manager-input" ng-model="toCartData.count" ng-disabled="isLoading" ng-change="updateCount()">
 
-                    <button class="tct-manager-button" ng-click="addToCart()" ng-disabled="isLoading" ng-if="!isLinkShown">Добавить в корзину</button>
-                    <a href="/cart" class="tct-manager-light-button" ng-if="isLinkShown">✓ В корзине</a>
-                </div>
+            //         <button class="tct-manager-button" ng-click="addToCart()" ng-disabled="isLoading" ng-if="!isLinkShown">Добавить в корзину</button>
+            //         <a href="/cart" class="tct-manager-light-button" ng-if="isLinkShown">✓ В корзине</a>
+            //     </div>
+            // </div>';
+
+            // $content = '<div ng-app="tctApp" ng-controller="toCartController" ng-init="init(\'' . str_replace(['(', ')', '"'], '', $GLOBALS['post']->post_title) . '\')">' . $content . $buttonTemplate . '</div>';
+
+            $inStockTemplate = '<div class="tct-manager-in-stock" ng-if="isToCartShown" ng-cloak>
+                &nbsp;
+                <p><strong>Наличие на складе:</strong></p>
+                <table>
+                    <tbody>
+                        <tr ng-if="productGroup.set_pair">
+                            <td>
+                            </td>
+                            <td>
+                                <strong>1 элемент</strong>
+                            </td>
+                            <td>
+                                <strong>2 элемент</strong>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="product in productGroup.products">
+                            <td>
+                                <strong>{{ product.variation }}<strong>
+                            </td>
+                            <td>
+                                <span ng-bind-html="product.in_stock"></span>
+                            </td>
+                            <td ng-if="productGroup.set_pair">
+                                <span ng-bind-html="product.in_stock_pair"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>';
 
-            $content = '<div ng-app="tctApp" ng-controller="toCartController" ng-init="init(\'' . str_replace(['(', ')', '"'], '', $GLOBALS['post']->post_title) . '\')">' . $content . $buttonTemplate . '</div>';
+            $content = '<div ng-app="tctApp" ng-controller="toCartController" ng-init="init(\'' . str_replace(['(', ')', '"'], '', $GLOBALS['post']->post_title) . '\')">' . $content . $inStockTemplate . '</div>';
         } 
     }
 
