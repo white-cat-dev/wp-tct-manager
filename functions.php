@@ -71,7 +71,7 @@ function tct_manager_content($content)
 function tct_manager_insert_post_data($data)
 {
 	$title = $data['post_title'];
-    $url = 'http://manager.582907.local/wp-api/product/post?' . http_build_query(['title' => $title]);
+    $url = 'https://manager.582907.ru/wp-api/product/post?' . http_build_query(['title' => $title]);
     $response = json_decode(file_get_contents($url), true);
 
     if (!empty($response['content']))
