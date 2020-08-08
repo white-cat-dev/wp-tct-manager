@@ -1,6 +1,6 @@
 var tctApp = angular.module('tctApp', ['ngResource', 'ngCookies']);
 
-var prefix = 'http://manager.582907.ru/wp-api';
+var prefix = 'https://manager.582907.ru/wp-api';
 
 
 tctApp.config(function($provide) {
